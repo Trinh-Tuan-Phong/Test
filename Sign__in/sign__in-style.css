@@ -1,0 +1,300 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary--color: #0280C7;
+}
+
+body {
+    background: #DEDDDD;
+}
+
+.bg-light {
+    background: var(--primary--color) !important;
+}
+
+.container-fluid {
+    padding: 0;
+    width  : 85%;
+    margin : 0 auto;
+}
+
+.head__left {
+    display    : flex;
+    align-items: center;
+}
+
+.head__left h5 {
+    margin: 0 0 0 10px;
+    color : white;
+}
+
+.head__left h5 b {
+    font-size: 12px;
+}
+
+.head__logo {
+    background         : url("/img/p.png") no-repeat;
+    background-size    : cover;
+    height             : 60px;
+    width              : 65px;
+    background-position: center;
+    border-radius      : 20px;
+}
+
+.li__search {
+    width: 100%;
+}
+
+.search__box {
+    width        : 100%;
+    height       : 50px;
+    border       : none;
+    outline      : none;
+    border-radius: 20px;
+}
+
+.head__right {
+    width          : 100%;
+    justify-content: space-around;
+}
+
+.head__phone,
+.head__cart {
+    display    : flex;
+    align-items: center;
+    color      : white;
+    cursor     : pointer;
+}
+
+.head__phone i,
+.head__cart i {
+    font-size   : 30px;
+    margin-right: 5px;
+}
+
+.head__cart a {
+    text-decoration: none;
+    display        : flex;
+    align-items    : center;
+    color          : white;
+    position       : relative;
+}
+
+.numberCircle {
+    position     : absolute;
+    top          : 5px;
+    left         : 20px;
+    width        : 17px;
+    text-align   : center;
+    background   : red;
+    border-radius: 50%;
+    border       : none;
+    font-size    : 12px;
+}
+
+.showme {
+    width           : 153px;
+    box-shadow      : 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: #1D1E22;
+    border          : 3px solid white;
+    padding         : 20px;
+    text-align      : center !important;
+}
+
+.head__cart:hover .showme-wrap {
+    display: block;
+}
+
+.showme-wrap {
+    display    : none;
+    position   : absolute;
+    margin-left: -190px;
+    text-align : center;
+    z-index    : 1;
+}
+
+.showme:hover {
+    display: block;
+}
+
+.head__cart:hover .showme {
+    display: block;
+}
+
+.showme {
+    top            : 110px;
+    position       : relative;
+    background     : #ffffff;
+    border         : 1px solid #719ECE;
+    /*set border colour here*/
+    width          : 400px;
+    height         : 150px;
+    border-radius  : 3px;
+    -webkit-filter : drop-shadow(0 1px 10px rgba(113, 158, 206, 0.8));
+    /*set shadow colour  and size here*/
+    -moz-box-shadow: 0 1px 10px rgba(113, 158, 206, 0.8);
+    filter         : drop-shadow(0 1px 10px rgba(113, 158, 206, 0.8));
+}
+
+.showme h4 {
+    color: var(--primary--color);
+}
+
+.showme:after,
+.showme:before {
+    bottom        : 100%;
+    border        : solid transparent;
+    content       : " ";
+    height        : 0;
+    width         : 0;
+    position      : absolute;
+    pointer-events: none;
+}
+
+.showme:after {
+    border-color       : rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width       : 19px;
+    left               : 50%;
+    margin-left        : -19px;
+}
+
+.showme:before {
+    border-color       : rgba(113, 158, 206, 0);
+    border-bottom-color: #719ECE;
+    border-width       : 20px;
+    left               : 50%;
+    margin-left        : -20px;
+}
+
+.head__bottom {
+    background: white;
+}
+
+.form__login {
+    background   : white;
+    height       : 600px;
+    width        : 60%;
+    margin       : 40px auto;
+    border-radius: 10px;
+}
+
+.login {
+    height: 100%;
+    width : 50%;
+    margin: 0 auto;
+}
+
+.login__head {
+    padding-top: 90px;
+    text-align : center;
+}
+
+.login__signin h6,
+.login__fb,
+.login__gg,
+.login__number {
+    margin-top: 25px;
+}
+
+.login__fb button,
+.login__gg button,
+.login__number button {
+    width        : 100%;
+    border       : none;
+    height       : 2.5rem;
+    border-radius: 5px;
+}
+
+.login__fb,
+.login__gg {
+    position: relative;
+    color   : white;
+}
+
+.login__number {
+    position: relative;
+    color   : var(--primary--color);
+}
+
+.login__fb i,
+.login__gg i,
+.login__number i {
+    position : absolute;
+    top      : 8px;
+    left     : 20px;
+    font-size: 25px;
+}
+
+.login__fb button {
+    background-color: rgb(45, 136, 255);
+    color           : white;
+}
+
+.login__gg button {
+    background-color: rgb(220, 78, 66);
+    color           : white;
+}
+
+.login__number button {
+    background: white;
+    color     : var(--primary--color);
+    border    : 1px solid var(--primary--color);
+}
+
+.login__fb button:hover,
+.login__gg button:hover,
+.login__number button:hover {
+    opacity: 0.9;
+}
+
+.login__signin h6 {
+    text-align: center;
+}
+
+.login__confirm {
+    margin-top     : 50px;
+    padding-bottom : 50px;
+    display        : flex;
+    align-items    : baseline;
+    justify-content: space-evenly;
+}
+
+.login__confirm h6 {
+    text-align: center;
+}
+
+
+@media screen and (max-width: 908px) {
+    .head__left h5 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .login__fb span,
+    .login__gg span,
+    .login__number span {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .form__login {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .login__fb i,
+    .login__gg i,
+    .login__number i {
+        display: none;
+    }
+}
