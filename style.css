@@ -14,6 +14,30 @@ body {
     background: #DEDDDD;
 }
 
+.sidebar {
+    display         : none;
+    background-color: var(--primary--color);
+    color           : white;
+    z-index         : 11;
+
+}
+
+.sidebar .sidebar__btn:hover {
+    background-color: white !important;
+    color           : var(--primary--color) !important;
+}
+
+.sidebar .sidebar__btn {
+    width: 23%;
+    float: right;
+}
+
+.head__top {
+    position: sticky;
+    top     : 0;
+    z-index : 10;
+}
+
 
 .bg-light {
     background: var(--primary--color) !important;
@@ -21,7 +45,7 @@ body {
 
 .container-fluid {
     padding: 0;
-    width  : 85%;
+    width  : 1150px;
     margin : 0 auto;
 }
 
@@ -67,6 +91,7 @@ body {
 .head__right {
     width          : 100%;
     justify-content: space-around;
+    flex-direction : unset;
 }
 
 .head__phone,
@@ -96,6 +121,12 @@ body {
     align-items    : center;
     color          : white;
     position       : relative;
+}
+
+.navbar-toggler {
+    width       : 6%;
+    margin-right: 50px;
+    padding     : 0;
 }
 
 .numberCircle {
@@ -226,22 +257,39 @@ body {
 }
 
 .section__body {
-    width        : 1100px;
+    width        : 1130px;
     margin       : 30px auto;
     margin-bottom: 0;
     transition   : 0.5s;
 }
 
 .section__top {
-    height: 60px;
+    height : 60px;
+    display: flex;
+}
+
+.w3-teal {
+    width                 : 60px;
+    background-color      : var(--primary--color) !important;
+    border-top-left-radius: 20px;
+}
+
+#openNav {
+    height          : 100%;
+    width           : 100%;
+    border          : none;
+    background-color: var(--primary--color) !important;
+    color           : white;
+    font-size       : 30px;
 }
 
 .img__advertisement {
-    background         : url("/img/img-1.webp") no-repeat;
-    height             : 100%;
-    background-size    : 100% 100%;
-    background-position: center;
-    border-radius      : 20px 20px 0 0;
+    background             : url("/img/img-1.webp") no-repeat;
+    height                 : 100%;
+    width                  : 100%;
+    background-size        : 165% 100%;
+    background-position    : center;
+    border-top-right-radius: 20px;
 }
 
 .section__bottom {
@@ -254,7 +302,9 @@ body {
 }
 
 .section__advertisement {
+    height    : 400px;
     transition: 0.5s;
+    display   : flex;
 }
 
 .section__menu {
@@ -268,8 +318,12 @@ body {
     padding: 0;
 }
 
+.section__menu .w3-button {
+    border-top: 1px solid white;
+}
+
 .section__menu ul li {
-    height     : 60px;
+    height     : 80px;
     display    : flex;
     align-items: center;
 }
@@ -284,8 +338,13 @@ body {
     transition: 0.7s;
 }
 
-.section__menu ul :hover {
+.section__menu ul li:hover {
     letter-spacing: 2px;
+
+}
+
+.section__menu .w3-button:hover {
+    background-color: var(--primary--color) !important;
 
 }
 
@@ -295,18 +354,18 @@ body {
 }
 
 .section__advertisement {
-    padding: 10px 0 0 10px;
+    padding-top: 10px;
 }
 
-.wrapper {
-    width        : 100%;
+.wrapper__left {
+    width        : 66%;
     height       : 100%;
     overflow     : hidden;
     position     : relative;
     border-radius: 5px;
 }
 
-.wrapper div {
+.wrapper__left div {
     width                  : 100%;
     height                 : 100%;
     position               : absolute;
@@ -317,19 +376,19 @@ body {
     background-position    : center center;
 }
 
-.wrapper>div:nth-child(2) {
+.wrapper__left>div:nth-child(2) {
     animation-delay: 5s;
 }
 
-.wrapper>div:nth-child(3) {
+.wrapper__left>div:nth-child(3) {
     animation-delay: 10s;
 }
 
-.wrapper>div:nth-child(4) {
+.wrapper__left>div:nth-child(4) {
     animation-delay: 15s;
 }
 
-.wrapper>div:nth-child(5) {
+.wrapper__left>div:nth-child(5) {
     animation-delay: 20s;
 }
 
@@ -346,6 +405,29 @@ body {
         opacity: 0;
     }
 
+}
+
+.wrapper__right {
+    width       : 34%;
+    padding-left: 10px;
+}
+
+.wrapper__right div {
+    height         : 198px;
+    background-size: 100% 100%;
+    transition     : 0.5s;
+}
+
+.wrapper__right div:hover {
+    transform: scale(1.05);
+}
+
+.background__right--1 {
+    background: url("img/img_8.webp") no-repeat;
+}
+
+.background__right--2 {
+    background: url("img/img_9.webp") no-repeat;
 }
 
 .background__1 {
@@ -377,22 +459,23 @@ body {
 }
 
 .wrapper__2 {
-    padding      : 0;
-    padding-top  : 10px;
-    --bs-gutter-x: none;
+    padding        : 0;
+    padding-top    : 10px;
+    --bs-gutter-x  : none;
+    justify-content: space-between;
 }
 
 .wrapper__2 a {
     padding: 0;
+    width  : 32%;
 }
 
 .wrapper__2 div {
-    margin         : 0 auto;
     height         : 165px;
     background-size: 100% 100%;
     transition     : 0.5s;
     border-radius  : 5px;
-    width          : 95%
+    width          : 100%
 }
 
 .wrapper__2 div:hover {
@@ -401,14 +484,61 @@ body {
 
 .section__select {
     background-color: white;
-    height          : 500px;
+    height          : 440px;
     margin-top      : 10px;
     border-radius   : 10px;
+}
+
+.select__top {
+    display        : flex;
+    justify-content: space-between;
+}
+
+.box__left,
+.box__right {
+    padding: 5px 20px;
+}
+
+.box__left h5 {
+    font-weight: bold;
+    font-size  : 24px;
+}
+
+.box__right {
+    display        : flex;
+    width          : 430px;
+    justify-content: space-between;
+}
+
+.box__right h5 {
+    font-size  : 20px;
+    font-weight: 500;
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1180px) {
+    .container-fluid {
+        width: 1030px;
+    }
+
+}
 
 
 
@@ -446,32 +576,38 @@ body {
         width: 90px;
     }
 
+    .wrapper__right div {
+        display: none;
+    }
+
     .section__advertisement {
-        width: 650px;
+        display: block;
+    }
+
+    .wrapper__left {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 780px) {
     .section__body {
-        width: 550px;
-    }
-
-    .section__advertisement {
-        width: 460px;
+        width: 640px;
     }
 
     .wrapper__2 div {
         height: 100px;
     }
+
+
 }
 
 @media screen and (max-width: 670px) {
     .section__body {
-        width: 450px;
+        width: 540px;
     }
 
     .section__advertisement {
-        width: 360px;
+        height: 300px;
     }
 }
 
@@ -480,18 +616,8 @@ body {
         width: 410px;
     }
 
-    .section__top {
-        display: none;
-    }
-
     .section__menu {
         border-top-left-radius: 20px;
-    }
-
-    .section__advertisement {
-        width       : 320px;
-        padding     : 0;
-        padding-left: 10px;
     }
 }
 

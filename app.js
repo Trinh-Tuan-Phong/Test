@@ -84,6 +84,51 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+function w3_open() {
+  document.getElementById("mySidebar").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.width = "33%";
+  document.getElementById("mySidebar").style.display = "block";
+
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+
+$(document).ready(function () {
+  $(".select__slider").slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    draggable: false,
+    prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
+    nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          infinite: false,
+        },
+      },
+    ],
+
+  });
+});
+
+
+
 
 
 
